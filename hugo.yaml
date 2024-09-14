@@ -1,0 +1,104 @@
+baseURL: https://example.org/
+title: wgp-2020的博客
+theme: hugo-theme-stack
+
+languageCode: en-us
+DefaultContentLanguage: zh-cn
+hasCJKLanguage: true
+
+frontmatter:
+  lastmod:
+    - lastmod
+    - :fileModTime
+    - :default
+
+services:
+    googleAnalytics:
+        id: G-92ZY9PMBPJ
+
+dateFormat:
+        published: 2006-01-02
+        lastUpdated: 2006-01-02 15:04
+
+footer:
+  since: 2024
+
+params:
+  sidebar:
+    emoji: 🍥
+    # subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    avatar:
+        enabled: true
+        local: true
+        src: img/70625361.png
+
+  widgets:
+    homepage:
+        - type: search
+        - type: archives
+          params:
+              limit: 5
+        - type: categories
+          params:
+              limit: 10
+        - type: tag-cloud
+          params:
+              limit: 10
+    page:
+        - type: toc
+
+menu:
+    main: []
+
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/wgp-2020
+          params:
+              icon: brand-github
+
+# 未知配置
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    goldmark:
+        extensions:
+            passthrough:
+                enable: true
+                delimiters:
+                    block:
+                        - - \[
+                          - \]
+                        - - $$
+                          - $$
+                    inline:
+                        - - \(
+                          - \)
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: true
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
