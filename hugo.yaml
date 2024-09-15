@@ -35,7 +35,7 @@ footer:
 
 params:
   sidebar:
-    emoji: 🍥
+    emoji: 😎
     # subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     avatar:
         enabled: true
