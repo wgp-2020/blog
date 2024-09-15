@@ -34,6 +34,7 @@ footer:
   since: 2024
 
 params:
+  favicon: /favicon.ico
   sidebar:
     emoji: 😎
     # subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
