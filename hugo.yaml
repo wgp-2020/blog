@@ -16,9 +16,19 @@ services:
     googleAnalytics:
         id: G-92ZY9PMBPJ
 
-dateFormat:
-        published: 2006-01-02
-        lastUpdated: 2006-01-02 15:04
+menu:
+  main: []
+
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/wgp-2020
+      params:
+        icon: brand-github
+
+permalinks:
+  post: /p/:slug/
+  page: /:slug/
 
 footer:
   since: 2024
@@ -32,12 +42,15 @@ params:
         local: true
         src: img/70625361.png
 
+  dateFormat:
+    published: 2006-01-02
+    lastUpdated: 2006-01-02 15:04
+
   widgets:
     homepage:
-        - type: search
         - type: archives
           params:
-              limit: 5
+              limit: 1
         - type: categories
           params:
               limit: 10
@@ -47,21 +60,24 @@ params:
     page:
         - type: toc
 
-menu:
-    main: []
-
-    social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/wgp-2020
-          params:
-              icon: brand-github
+  comments:
+    enabled: true
+    provider: giscus
+    giscus:
+      repo: wgp-2020/blog
+      repoID: R_kgDOMwrQpQ
+      category: Announcements
+      categoryID: DIC_kwDOMwrQpc4CiaS-
+      mapping: pathname
+      strict: 1
+      lightTheme: light
+      darkTheme: dark_dimmed
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: top
+      lang: zh-CN
 
 # 未知配置
-permalinks:
-    post: /p/:slug/
-    page: /:slug/
-
 related:
     includeNewer: true
     threshold: 60
