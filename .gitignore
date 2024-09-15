@@ -1,6 +1,5 @@
 .idea
 public
 resources
-themes
 assets/jsconfig.json
 .hugo_build.lock
