@@ -45,11 +45,6 @@ params:
   dateFormat:
     published: 2006-01-02
     lastUpdated: 2006-01-02 15:04
-  defaultImage:
-    opengraph:
-      enabled: true
-      local: true
-      src: img/default.jpg
 
   widgets:
     homepage:
